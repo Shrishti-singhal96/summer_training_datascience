@@ -1,17 +1,19 @@
-#oops
-'''class account():
+#oops in python
+class account():
     pass
 a1=account()
 a2=account()
 a3=account()
 print(a1)
 print(a2)
-print(a3)'''
+print(a3)
 
 
 
-#QUES1
-'''class student:
+#Q1. Student Information System 
+# Create a Student class with attributes: Name, Roll Number, Marks (3 subjects) andMethods: get_data(), display_data(), calculate_percentage().
+
+class student:
    def get_data(obj):
       obj.name=input("enter name= ")
       obj.roll_number=int(input("enter roll number= "))
@@ -33,15 +35,19 @@ print(a3)'''
 s=student()
 s.get_data()
 s.display_data()
-s.calculate_percentage()'''
+s.calculate_percentage()
 
 
 
 
 
 
-#QUES2
-'''class bank_account():
+#Q2. Bank Account 
+# Create a BankAccount class with Account Holder Name, Account Number, Balance.
+#Methods: deposit(), withdraw(), display_balance().
+#Conditions: Deposit must be positive and withdrawal cannot exceed balance.
+
+class bank_account():
     def get_data(paise):
         paise.accname=input("enter account holder name= ")
         paise.accno=int(input("enter your account number= "))
@@ -68,12 +74,15 @@ ruppee=bank_account()
 ruppee.get_data()
 ruppee.deposit()
 ruppee.withdraw()
-ruppee.display_balance()'''
+ruppee.display_balance()
 
 
 
-#QUES3
-'''class employee():
+#QUES3 Employee Salary Calculator
+#Create an Employee class with Employee ID, Name, Basic Salary.
+#Methods to calculate HRA (20%), DA (10%), Gross Salary, and display details.
+
+class employee():
     def getdata(e):
         e.id=int(input("enter employee id: "))
         e.name=input("enter employee name:")
@@ -102,10 +111,13 @@ emp.gross_salary()
 emp.display()
 
 
-print("\n","\n")'''
+print("\n","\n")
 
-#QUES4
-'''class Rectangle:
+#QUES4 Rectangle Operations
+#Create a Rectangle class with Length and Breadth.
+#Methods: area(), perimeter(), check_square().
+
+class Rectangle:
     def getdata(r):
         r.l=int(input("enter length: "))
         r.b=int(input("enter breadth: "))
@@ -128,13 +140,17 @@ rec.getdata()
 rec.area()
 rec.perimeter()
 rec.check_square()
-'''
 
 
 
-#QUES5
 
-'''class vehicle:
+#QUES5 Vehicle Management System
+#Create a Vehicle base class with Brand and Model.
+#Create Car (Fuel Type) and Bike (Engine Capacity) child classes.
+#Override display() in child classes.
+
+
+class vehicle:
     def getdata(gddi):
         gddi.b=input("enter vehicle brand: ")
         gddi.m=input("enter vehicle model: ")
@@ -173,10 +189,16 @@ b.display()
 
 
 print("\n")
-'''
 
-#QUES 6
-'''class person:
+
+#QUES 6 Person → Teacher → Principal
+#Use multilevel inheritance.
+#Person: Name, Age
+#Teacher: Subject
+#Principal: School Name
+#Display all details using Principal object.
+
+class person:
     def getdata(p):
         p.name=input("enter name: ")
         p.age =int(input("enter age: "))
@@ -202,10 +224,14 @@ p.subject()
 p.school_name()
 p.display()
 
-print("\n")'''
+print("\n")
 
-#QUES 7
-'''class shape:
+#QUES 7 Shape Area Calculator
+#Create Shape parent class.
+#Child classes: Circle, Rectangle, Triangle.
+#Each class should implement its own area() method.
+
+class shape:
     def area(s):
         print("area of shape")
 
@@ -246,16 +272,22 @@ r.area()
 t=triangle()
 t.getdata()
 t.area()
-'''
 
-#QUES 8 you can use super.pay() in child classes to print (you want to pay ,amoount) while using c.pay()
-'''class payment:
+
+#QUES 8 Payment Gateway
+#Create Payment parent class.
+#Child classes: CreditCard, UPI, NetBanking.
+#Override pay(amount) method.
+
+
+# INSIGHTS:you can use super.pay() in child classes to print (you want to pay ,amoount) while using c.pay()
+class payment:
     def has(amount):
-    amount.total_balance=100000
-    amount.cpin=1234
-    amount.upi_pin=6767
-    amount.username="hero"
-    amount.password=3333
+     amount.total_balance=100000
+     amount.cpin=1234
+     amount.upi_pin=6767
+     amount.username="hero"
+     amount.password=3333
     
     def getdata(amount):
         amount.p=int(input("enter payable amount"))
@@ -309,10 +341,16 @@ u.pay()
 n=netbanking()
 n.display()
 n.getdata()
-n.pay()'''
+n.pay()
 
-#QUES 9
-'''class library:
+
+
+#QUES 9 Library Management
+#Create Library parent class with issue_book().
+#Child classes: StudentLibrary (max 2 books), FacultyLibrary (max 5 books).
+#Override issue_book().
+
+class library:
     def issue_book(i):
         print("issue a book")
 
@@ -347,13 +385,18 @@ s.issue_book()
 f=facultylibrary()
 f.display()
 f.issue_book()
-'''
 
 
 
 
-#QUES10 use double undersquare_ before name to declare private variable and method
-'''class atm:
+
+#QUES10 ATM Machine (Encapsulation)
+#Create ATM class with private PIN and Balance.
+#Methods: verify_pin(), deposit(), withdraw(), change_pin(), display_balance().
+#PIN verification required before every transaction.
+
+# INSIGHTS: use double undersquare_ before name to declare private variable and method
+class atm:
     
     __pin=1234
     __balance=50000   
@@ -404,14 +447,19 @@ a.verify_pin()
 a.deposit()
 a.withdraw()
 a.change_pin()
-a.display_balance()'''
+a.display_balance()
 
 
 
 
-#QUES11 to declare abstract class import abc from ABC,abstractmethod and then write ABC in bracket of the class which u want to abstract and write @abstractmethod before method you want to abstract
+#QUES11 Employee Payroll System (Abstraction)
+#Using abc module, create abstract Employee class with calculate_salary() and display().
+#Child classes: FullTimeEmployee and PartTimeEmployee
+
+# INSIGHTS:
+# to declare abstract class import abc from ABC,abstractmethod and then write ABC in bracket of the class which u want to abstract and write @abstractmethod before method you want to abstract
 # abstract classes are the ones whose objects cannot be created and abstract method don't have any implementationof its own contain 'pass' they are being used in child class by overriding
-'''from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 class Employee(ABC):
     @abstractmethod
     def calculate_salary(s):
@@ -447,11 +495,15 @@ p=PartTimeEmployee()
 p.getdata()
 p.display()
 p.calculate_salary() 
-'''
 
 
 
-#QUES12
+
+#QUES12 Online Shopping System
+#Create abstract Product class with private Product ID and Price.
+#Child classes: Electronics (10%), Clothing (20%), Grocery (5%).
+#Implement inheritance, encapsulation, abstraction and polymorphism.
+
 from abc import ABC,abstractmethod
 class Product(ABC):
     
