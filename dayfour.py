@@ -1,4 +1,4 @@
-#oops in python
+'''#oops in python
 class account():
     pass
 a1=account()
@@ -570,4 +570,57 @@ print("BUYING GROCERY")
 g=grocery()
 g.getdata()
 g.discount()
-g.display()
+g.display()'''
+while True:
+    
+    print("1. TEMPERATURE /n 2.RAINFALL /n 3.HUMIDITY /n 4.MONTH /n 5.WEATHER CHARCTERISTICS /n 6.EXIT /n")
+    o=int(input("ENTER YOUR CHOICE TO KNOW SEASON "))
+    if o==1:
+        temp=float(input("enter temperature in celsius: " ))
+        if temp >30:
+            print(" LIKELY SUMMER")
+        elif temp >=20 and temp<=30 :
+            print("RAINY OR AUTUMN ")
+        elif temp<20:
+            print(" LIKELY WINTER")
+    print("\n")        
+    print("ENTER ATLEAST ONE MORE CHOICE TO CONFIRM ACCURATE SEASON")
+
+    if o==2:
+        rain=float(input("ENTER RAINFALL IN CM: "))
+        if rain>200:
+            print("MONSOON")
+        elif rain>=50 and rain>=200:
+            print("AUTUMN")
+        else:print("SUMMER OR WINTER")
+    elif o==3:
+        h=input("ENTER HUMIDITY LOW,HIGH,MODERATE OR LOW TO MODERATE: ").lower()
+        if h=="high":
+            print("MONSOON")
+        elif h=="moderate":
+            print("AUTUMN")
+        elif h=="low to moderate":
+            print("WINTER")
+        else: print("SUMMER")
+    elif o ==4:
+        x=input("ENTER MONTH ").lower()
+        if x in ["december","january","februaary"]:
+            print("WINTER")
+        elif x in ["march","april","may","june"]:
+            print("SUMMER")
+        elif x in ["july","august","september"]:
+            print("RAINY")
+        else: print("AUTUMN")
+    elif o==5:
+        w=input("ENTER WEATHER CHARACTERISTICS: HOT OR LOO,COOL,HEAVY RAINFALL,PLEASANT WEATHER OR LEAF FALLING ").lower()
+        if h=="high rainfall":
+            print("MONSOON")
+        elif h=="hot or low":
+            print("SUMMER")
+        elif h=="cool":
+            print("WINTER")
+        else: print("AUTUMN")
+    elif o==6:
+        print("SATISFIED EXITING")
+        break
+    else: print("invalid choice")
